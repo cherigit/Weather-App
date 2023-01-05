@@ -1,0 +1,79 @@
+body:first-letter {
+  text-transform: capitalize !important;
+}
+
+h1 {
+  color: blue !important;
+  font-size: 4.5rem;
+}
+
+.current_temp {
+  color: blue;
+}
+
+#temperature {
+  color: blue;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+#units {
+  position: relative;
+  top: -25px;
+}
+
+#description {
+  color: blue;
+}
+
+#icon {
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
+.unit {
+  position: relative;
+  top: -23px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.city_temp {
+  padding-left: 30px;
+}
+
+.wireframe {
+  margin-top: 10px;
+  border-color: #630f0f;
+}
+
+.container {
+  background: white;
+  margin: 0 auto;
+}
+
+.weather_icon {
+  padding: 20px;
+  font-size: 4.5rem;
+}
+
+.weather_wireframe {
+  max-width: 600px;
+
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+li {
+  list-style: none;
+  font-weight: 500;
+  color: blue;
+}
+
+ul {
+  list-style: none;
+  font-weight: 500;
+  color: blue;
+}
