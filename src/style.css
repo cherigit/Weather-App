@@ -19,7 +19,9 @@ h1 {
 
 #units {
   position: relative;
-  top: -25px;
+  top: -22px;
+  font-weight: 500;
+  color: blue;
 }
 
 #description {
@@ -36,11 +38,6 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-
-.unit {
-  position: relative;
-  top: -23px;
 }
 
 a:link {
