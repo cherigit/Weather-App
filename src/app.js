@@ -152,9 +152,4 @@ function getForcast(city) {
 let form = document.querySelector("#form");
 form.addEventListener("submit", changeCity);
 
-let fahLink = document.querySelector("#fah_link");
-fahLink.addEventListener("click", showFah);
-let cellink = document.querySelector("#cel_link");
-cellink.addEventListener("click", showCel);
-
 let celsiusTemp = null;

@@ -30,9 +30,15 @@
                       type="text"
                       id="cityholder"
                       placeholder="Input City"
-                      width="250px"
+                      width="450px"
                     />
-                    <input type="submit" id="submitbutton" value="Submit" />
+                    <button
+                      type="submit"
+                      id="submitbutton"
+                      class="btn btn-primary"
+                    >
+                      Submit
+                    </button>
                   </form>
                 </th>
               </tr>
@@ -62,10 +68,7 @@
                     <img src="" id="icon" />
                     <span class="col">
                       <span id="temperature"></span>
-                      <span id="units">
-                        <a href="#" id="cel_link">C</a> |
-                        <a href="#" id="fah_link">F</a>
-                      </span>
+                      <span id="units"> C </span>
                     </span>
                   </div>
                 </div>
@@ -73,7 +76,7 @@
               <div class="col">
                 <ul>
                   <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind"></span> km/h</li>
+                  <li>Wind: <span id="wind"></span> m/h</li>
                 </ul>
               </div>
             </div>
