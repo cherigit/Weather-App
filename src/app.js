@@ -74,6 +74,8 @@ function showWeather(response) {
   showdesc.innerHTML = `${description}`;
   showicon.setAttribute("src", `${icon}`);
   showDate.innerHTML = formatDate(response.data.time * 1000);
+
+  getForcast(response.data.city);
 }
 //end
 
@@ -107,7 +109,7 @@ function showCel(event) {
 
 //to show forecast details
 function displayForecast(response) {
-  console.log(response.data.daily);
+  console.log(response.data.city);
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
   let forecastHTML = `<div class="row">`;
@@ -140,9 +142,11 @@ function displayForecast(response) {
 }
 //end
 
-//scripts for getting forecast weather details
-let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiURL).then(displayForecast);
+//to get forecast weather details
+function getForcast(city) {
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
 //end
 
 let form = document.querySelector("#form");
