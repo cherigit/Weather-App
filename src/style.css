@@ -31,6 +31,13 @@ h1 {
   padding-bottom: 30px;
 }
 
+#forecastIcon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .unit {
   position: relative;
   top: -23px;
@@ -64,6 +71,14 @@ a:link {
 
   border: 1px solid #dadde1;
   border-radius: 5px;
+}
+
+.weather_forecast_date {
+  text-align: center;
+}
+
+.weather_forecast_temp {
+  text-align: center;
 }
 
 li {

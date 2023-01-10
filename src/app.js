@@ -19,7 +19,6 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = mapDay[now.getDay()];
-  //return `mapDay[now.getDay()] + " " + hours + ": " + mins`;
   return `${day} ${hours}:${mins}`;
 }
 
@@ -90,10 +89,35 @@ function showCel(event) {
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = `${celsiusTemp}°`;
 }
-
+//to show forecast details
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["4", "5", "6", "7", "8"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather_forecast_date">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
+                alt="img" width="42" id="forecastIcon"
+              />
+              <div class="weather_forecast_temp">
+                <span class="weather_forecast_temp_max">18°</span>
+                <span class="weather_forecast_temp_min">15°</span>
+              </div>
+      </div>
+    `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+//--------------------
 let fahLink = document.querySelector("#fah_link");
 fahLink.addEventListener("click", showFah);
 let cellink = document.querySelector("#cel_link");
 cellink.addEventListener("click", showCel);
 
 let celsiusTemp = null;
+displayForecast();
