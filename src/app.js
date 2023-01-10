@@ -44,64 +44,42 @@ function changeCity(event) {
 
 // to show temperature and other details
 function showWeather(response) {
-  //let temperature = Math.round(response.data.temperature.current);
-  //let humidity = response.data.temperature.humidity;
-  //let wind = Math.round(response.data.wind.speed);
-  //let description = response.data.condition.description;
-  let description = response.data.country;
-  //let icon = response.data.condition.icon_url;
-  //let lastupdated = response.data.time;
-  //celsiusTemp = Math.round(temperature);
   console.log(response.data);
-  //let showtemp = document.querySelector("#temperature");
-  //let showhumi = document.querySelector("#humidity");
-  // let showwind = document.querySelector("#wind");
+  let temperature = Math.round(response.data.temperature.current);
+  let humidity = response.data.temperature.humidity;
+  let wind = Math.round(response.data.wind.speed);
+  let description = response.data.condition.description;
+  let icon = response.data.condition.icon_url;
+  let lastupdated = response.data.time;
+  celsiusTemp = Math.round(temperature);
+  let showtemp = document.querySelector("#temperature");
+  let showhumi = document.querySelector("#humidity");
+  let showwind = document.querySelector("#wind");
   let showdesc = document.querySelector("#description");
-  //let showicon = document.querySelector("#icon");
-  //let showDate = document.querySelector("#current_date");
-  //showtemp.innerHTML = `${celsiusTemp}°`;
-  //showhumi.innerHTML = `${humidity}`;
-  // showwind.innerHTML = `${wind}`;
+  let showicon = document.querySelector("#icon");
+  let showDate = document.querySelector("#current_date");
+  showtemp.innerHTML = `${celsiusTemp}°`;
+  showhumi.innerHTML = `${humidity}`;
+  showwind.innerHTML = `${wind}`;
   showdesc.innerHTML = `${description}`;
-  //showicon.setAttribute("src", `${icon}`);
-  //showDate.innerHTML = formatDate(response.data.time * 1000);
-
-  //getCoord(response.data.coordinates);
+  showicon.setAttribute("src", `${icon}`);
+  showDate.innerHTML = formatDate(response.data.time * 1000);
 }
 //end
 
 //scripts for getting current weather details
 let z = document.getElementById("cityreturn").innerHTML;
 let city = z;
-let urlRoot = "https://api.shecodes.io/weather/v1/forecast?";
+let urlRoot = "https://api.shecodes.io/weather/v1/current?";
 let apiKey = "84c6e0b933fac71ce8f9a33t197o5bd2";
 let units = "metric";
 let url = `${urlRoot}query=${city}&key=${apiKey}&units=${units}`;
 //let url =
 //("https://api.shecodes.io/weather/v1/forecast?query=${city}&key=84c6e0b933fac71ce8f9a33t197o5bd2&units=metric");
 
-//axios.get(url).then(showWeather1);
+axios.get(url).then(showWeather);
 //end
 
-// duplicate to show temperature and other details
-function displayForecast1(response) {
-  let description = response.data.city;
-
-  console.log(response.data);
-
-  let showdesc = document.querySelector("#description");
-  //let showicon = document.querySelector("#icon");
-  //let showDate = document.querySelector("#current_date");
-  //showtemp.innerHTML = `${celsiusTemp}°`;
-  //showhumi.innerHTML = `${humidity}`;
-  // showwind.innerHTML = `${wind}`;
-  showdesc.innerHTML = `${description}`;
-  //showicon.setAttribute("src", `${icon}`);
-  //showDate.innerHTML = formatDate(response.data.time * 1000);
-
-  //getCoord(response.data.coordinates);
-}
-//end
 function showFah(event) {
   event.preventDefault();
   let fahTemp = Math.round((celsiusTemp * 9) / 5 + 32);
