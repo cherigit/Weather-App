@@ -19,32 +19,26 @@
     <div class="container">
       <div class="container p-5 my-5 mt-10">
         <div class="weather_wireframe">
-          <table class="table table-sm table-responsive-sm">
-            <thead class="table-info">
-              <tr>
-                <th></th>
-                <th></th>
-                <th>
-                  <form id="form">
-                    <input
-                      type="text"
-                      id="cityholder"
-                      placeholder="Enter a City"
-                      style="width: 450px; height: 41px; vertical-align: middle"
-                    />
-                    <button
-                      type="submit"
-                      id="submitbutton"
-                      class="btn btn-primary"
-                      style="width: 106px; margin-left: 5px"
-                    >
-                      Submit
-                    </button>
-                  </form>
-                </th>
-              </tr>
-            </thead>
-          </table>
+          <form id="form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  class="form-control search-input"
+                  id="cityholder"
+                  placeholder="Enter a City"
+                />
+              </div>
+              <div class="col-3 p-0">
+                <input
+                  type="submit"
+                  id="submitbutton"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+
           <div class="row">
             <div class="col-6">
               <div class="city_temp">
